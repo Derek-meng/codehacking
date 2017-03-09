@@ -10,7 +10,7 @@ class Post extends Model
     protected $fillable = [
         'title',
         'body',
-        'catrgor_id',
+        'category_id',
         'user_id',
         'photo_id'
     ];
@@ -21,6 +21,6 @@ class Post extends Model
         return $this->belongsTo('App\Photo');
     }
     public function category(){
-        return $this->belongsTo('App\Categor');
+        return $this->belongsTo('App\Category');
     }
 }
