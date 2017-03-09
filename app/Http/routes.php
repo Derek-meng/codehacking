@@ -12,9 +12,14 @@
 */
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
+//    $user=Auth::user();
+//    if($user->isAdmin()){
+//        echo 'this is administaotr';
+//    }
 });
 
 Route::auth();
@@ -23,4 +28,8 @@ Route::get('/home', 'HomeController@index');
 Route::get('/admin',function (){
     return view('admin.index');
 });
-Route::resource('admin/users','AdminUsersController');
+
+Route::group(['middleware'=>'admin'],function (){
+    Route::resource('admin/users','AdminUsersController');
+    Route::resource('admin/posts','AdminPostController');
+});
