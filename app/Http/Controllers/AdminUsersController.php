@@ -110,7 +110,6 @@ class AdminUsersController extends Controller
             $input['password']=bcrypt($request->password);
         }
         $user=User::findOrFail($id);
-
         if($file=$request->file('photo_id')){
             $name=time().$file->getClientOriginalName();
             $file->move('images',$name);

@@ -11,9 +11,6 @@
 |
 */
 
-use App\User;
-use Illuminate\Support\Facades\Auth;
-
 Route::get('/', function () {
     return view('welcome');
 //    $user=Auth::user();
@@ -36,4 +33,5 @@ Route::get('/test',function (){
 Route::group(['middleware'=>'admin'],function (){
     Route::resource('admin/users','AdminUsersController');
     Route::resource('admin/posts','AdminPostController');
+    Route::resource('admin/catergories','AdminCategoriesController');
 });

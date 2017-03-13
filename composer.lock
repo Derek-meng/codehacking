@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "629d336385a176cae7c4fc6a693db110",
+    "content-hash": "2bd8bde220aaf9f9acac5ce06a75886f",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -966,6 +966,129 @@
             "time": "2016-03-09T05:03:14+00:00"
         },
         {
+            "name": "recca0120/laravel-tracy",
+            "version": "v1.8.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/recca0120/laravel-tracy.git",
+                "reference": "141ee41f6cc36f4cdc95163b66e6edf015a151bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/141ee41f6cc36f4cdc95163b66e6edf015a151bb",
+                "reference": "141ee41f6cc36f4cdc95163b66e6edf015a151bb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^5.1",
+                "illuminate/database": "^5.1",
+                "illuminate/routing": "^5.1",
+                "illuminate/session": "^5.1",
+                "illuminate/support": "^5.1",
+                "illuminate/view": "^5.1",
+                "php": ">=5.5.9",
+                "recca0120/terminal": "^1.6.7",
+                "tracy/tracy": "^2.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.4",
+                "nesbot/carbon": "~1.20",
+                "phpunit/phpunit": "~4.8|~5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Recca0120\\LaravelTracy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "recca0120",
+                    "email": "recca0120@gmail.com"
+                }
+            ],
+            "description": "A Laravel Package to integrate Nette Tracy Debugger",
+            "keywords": [
+                "debug",
+                "debugbar",
+                "error",
+                "error handler",
+                "laravel",
+                "nette",
+                "profiler",
+                "tracy",
+                "webprofiler"
+            ],
+            "time": "2017-03-08T07:27:54+00:00"
+        },
+        {
+            "name": "recca0120/terminal",
+            "version": "v1.6.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/recca0120/laravel-terminal.git",
+                "reference": "62631c85d2fe7576067a534b717ef93c9ddee86e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/62631c85d2fe7576067a534b717ef93c9ddee86e",
+                "reference": "62631c85d2fe7576067a534b717ef93c9ddee86e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^5.1",
+                "illuminate/database": "^5.1",
+                "illuminate/filesystem": "^5.1",
+                "illuminate/routing": "^5.1",
+                "illuminate/view": "^5.1",
+                "php": ">=5.5.9",
+                "symfony/finder": "2.7.*|2.8.*|3.0.*|3.1.*|3.2.*",
+                "webmozart/glob": "^4.1"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "mockery/mockery": "~0.9.4",
+                "nesbot/carbon": "~1.20",
+                "phpunit/phpunit": "~4.8|~5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Recca0120\\Terminal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "recca0120",
+                    "email": "recca0120@gmail.com"
+                }
+            ],
+            "description": "run laravel artisan command in web application",
+            "keywords": [
+                "artisan",
+                "console",
+                "laravel",
+                "terminal",
+                "web",
+                "web artisan"
+            ],
+            "time": "2017-03-10T14:42:24+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.6",
             "source": {
@@ -1138,16 +1261,16 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.2.4",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "9137eb3a3328e413212826d63eeeb0217836e2b6"
+                "reference": "b7a1b9e0a0f623ce43b4c8d775eb138f190c9d8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/9137eb3a3328e413212826d63eeeb0217836e2b6",
-                "reference": "9137eb3a3328e413212826d63eeeb0217836e2b6",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b7a1b9e0a0f623ce43b4c8d775eb138f190c9d8d",
+                "reference": "b7a1b9e0a0f623ce43b4c8d775eb138f190c9d8d",
                 "shasum": ""
             },
             "require": {
@@ -1194,7 +1317,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-01-02T20:32:22+00:00"
+            "time": "2017-02-21T09:12:04+00:00"
         },
         {
             "name": "symfony/finder",
@@ -1799,6 +1922,68 @@
             "time": "2016-07-26T08:03:56+00:00"
         },
         {
+            "name": "tracy/tracy",
+            "version": "v2.4.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tracy.git",
+                "reference": "c9fbca15b0a11d904c7783b7aad114182618d8d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/c9fbca15b0a11d904c7783b7aad114182618d8d4",
+                "reference": "c9fbca15b0a11d904c7783b7aad114182618d8d4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-session": "*",
+                "php": ">=5.4.4"
+            },
+            "require-dev": {
+                "nette/di": "~2.3",
+                "nette/tester": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/shortcuts.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Tracy: useful PHP debugger",
+            "homepage": "https://tracy.nette.org",
+            "keywords": [
+                "debug",
+                "debugger",
+                "nette"
+            ],
+            "time": "2017-01-29T19:39:20+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -1847,6 +2032,149 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "webmozart/assert",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/assert.git",
+                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/2db61e59ff05fe5126d152bd0655c9ea113e550f",
+                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Assert\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "Assertions to validate method input/output with nice error messages.",
+            "keywords": [
+                "assert",
+                "check",
+                "validate"
+            ],
+            "time": "2016-11-23T20:04:58+00:00"
+        },
+        {
+            "name": "webmozart/glob",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/glob.git",
+                "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/glob/zipball/3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
+                "reference": "3cbf63d4973cf9d780b93d2da8eec7e4a9e63bbe",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3|^7.0",
+                "webmozart/path-util": "^2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1",
+                "symfony/filesystem": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\Glob\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "A PHP implementation of Ant's glob.",
+            "time": "2015-12-29T11:14:33+00:00"
+        },
+        {
+            "name": "webmozart/path-util",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmozart/path-util.git",
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmozart/path-util/zipball/d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
+                "reference": "d939f7edc24c9a1bb9c0dee5cb05d8e859490725",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "webmozart/assert": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.6",
+                "sebastian/version": "^1.0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Webmozart\\PathUtil\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bernhard Schussek",
+                    "email": "bschussek@gmail.com"
+                }
+            ],
+            "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
+            "time": "2015-12-17T08:42:14+00:00"
         }
     ],
     "packages-dev": [
@@ -2933,16 +3261,16 @@
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "1.0.2",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "913401df809e99e4f47b27cdd781f4a258d58791"
+                "reference": "b19cc3298482a335a95f3016d2f8a6950f0fbcd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/913401df809e99e4f47b27cdd781f4a258d58791",
-                "reference": "913401df809e99e4f47b27cdd781f4a258d58791",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/b19cc3298482a335a95f3016d2f8a6950f0fbcd7",
+                "reference": "b19cc3298482a335a95f3016d2f8a6950f0fbcd7",
                 "shasum": ""
             },
             "require": {
@@ -2982,7 +3310,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2015-11-11T19:50:13+00:00"
+            "time": "2016-10-03T07:41:43+00:00"
         },
         {
             "name": "sebastian/version",
@@ -3130,16 +3458,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.2.4",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "9724c684646fcb5387d579b4bfaa63ee0b0c64c8"
+                "reference": "093e416ad096355149e265ea2e4cc1f9ee40ab1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/9724c684646fcb5387d579b4bfaa63ee0b0c64c8",
-                "reference": "9724c684646fcb5387d579b4bfaa63ee0b0c64c8",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/093e416ad096355149e265ea2e4cc1f9ee40ab1a",
+                "reference": "093e416ad096355149e265ea2e4cc1f9ee40ab1a",
                 "shasum": ""
             },
             "require": {
@@ -3181,57 +3509,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-16T22:46:52+00:00"
-        },
-        {
-            "name": "webmozart/assert",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
-                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/2db61e59ff05fe5126d152bd0655c9ea113e550f",
-                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3.3 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.6",
-                "sebastian/version": "^1.0.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Webmozart\\Assert\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bernhard Schussek",
-                    "email": "bschussek@gmail.com"
-                }
-            ],
-            "description": "Assertions to validate method input/output with nice error messages.",
-            "keywords": [
-                "assert",
-                "check",
-                "validate"
-            ],
-            "time": "2016-11-23T20:04:58+00:00"
+            "time": "2017-03-07T16:47:02+00:00"
         }
     ],
     "aliases": [],
