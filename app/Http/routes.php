@@ -28,6 +28,10 @@ Route::get('/home', 'HomeController@index');
 Route::get('/admin',function (){
     return view('admin.index');
 });
+Route::get('/test',function (){
+    $value = str_contains('This is my name', 'my');
+    return $value;
+});
 
 Route::group(['middleware'=>'admin'],function (){
     Route::resource('admin/users','AdminUsersController');
