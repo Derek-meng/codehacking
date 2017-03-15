@@ -10,6 +10,8 @@
             <th>Category</th>
             <th>Title</th>
             <th>Body</th>
+            <th>Post link</th>
+            <th>Comments</th>
             <th>Created</th>
             <th>Updated</th>
         </tr>
@@ -24,6 +26,8 @@
                     <td>{{$post->category_id ? $post->category->name:'Uncategorized'}}</td>
                     <td><a href={{route('admin.posts.edit',$post->id)}}>{{$post->title}}</a></td>
                     <td>{{str_limit($post->body,50)}}</td>
+                    <td><a href="{{route('home.post',$post->id)}}">View Posts</a></td>
+                    <td><a href="{{route('admin.comments.show',$post->id)}}">View Comment</a></td>
                     <td>{{$post->created_at}}</td>
                     <td>{{$post->updated_at}}</td>
                 </tr>

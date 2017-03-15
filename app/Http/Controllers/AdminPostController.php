@@ -138,4 +138,13 @@ class AdminPostController extends Controller
         return redirect('/admin/posts');
 
     }
+
+    public function post($id)
+    {
+//        dd(Post::findOrFail($id));
+        $post = Post::findOrFail($id);
+        $comments = $post->comments()->whereIsActive(1)->get();
+//        dd(($comments[0]));
+        return view('post',compact('post','comments'));
+    }
 }
