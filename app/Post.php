@@ -2,19 +2,32 @@
 
 namespace App;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
     //
+//    use Sluggable;
+//    public function sluggable()
+//    {
+//        return [
+//            'slug' => [
+//                'source' => 'title',
+//                'unique' => true,
+//            ]
+//        ];
+//    }
     use Sluggable;
+    use SluggableScopeHelpers;
+
     public function sluggable()
     {
         return [
             'slug' => [
                 'source' => 'title',
-                'unique' => true,
-            ]
+                'onUpdate' => true
+            ],
         ];
     }
     protected $fillable = [

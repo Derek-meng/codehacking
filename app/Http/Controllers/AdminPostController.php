@@ -21,7 +21,7 @@ class AdminPostController extends Controller
     public function index()
     {
         //
-        $posts= Post::all();
+        $posts= Post::paginate(2);
         return view('admin.posts.index',compact('posts'));
     }
 
@@ -32,7 +32,7 @@ class AdminPostController extends Controller
      */
     public function create()
     {
-        //
+        //d
         $categories=Category::lists('name','id')->all();
         return view('admin.posts.create',compact('categories'));
     }
@@ -83,7 +83,6 @@ class AdminPostController extends Controller
         //
         $post=Post::findOrFail($id);
         $categories=Category::lists('name','id')->all();
-//        dd($categories);
         return view('admin.posts.edit',compact('post','categories'));
     }
 
@@ -115,6 +114,7 @@ class AdminPostController extends Controller
                 $input['photo_id']=$photo->id;
             }
         }
+//        dd($input);
         $post->update($input);
         return redirect('/admin/posts');
     }
@@ -139,12 +139,10 @@ class AdminPostController extends Controller
 
     }
 
-    public function post($id)
+    public function post($slug)
     {
-//        dd(Post::findOrFail($id));
-        $post = Post::findOrFail($id);
+        $post = Post::findBySlugOrFail($slug);
         $comments = $post->comments()->whereIsActive(1)->get();
-//        dd(($comments[0]));
-        return view('post',compact('post','comments'));
+        return view('post', compact('post', 'comments'));
     }
 }
