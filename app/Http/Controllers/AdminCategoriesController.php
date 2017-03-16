@@ -36,7 +36,7 @@ class AdminCategoriesController extends Controller
     {
         //
         Category::create($request->all());
-        return redirect('/admin/catergories');
+        return redirect('/admin/categories');
     }
 
     /**
@@ -75,7 +75,7 @@ class AdminCategoriesController extends Controller
         //
         $catergory=Category::findOrFail($id);
         $catergory->update($request->all());
-        return redirect('/admin/catergories');
+        return redirect('/admin/categories');
     }
 
     /**
@@ -88,6 +88,6 @@ class AdminCategoriesController extends Controller
     {
         //
         Category::findOrFail($id)->delete();
-        return redirect('/admin/catergories');
+        return redirect('/admin/categories');
     }
 }
