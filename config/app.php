@@ -150,6 +150,9 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        JeroenNoten\LaravelCkEditor\ServiceProvider::class,
+        Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -205,6 +208,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
