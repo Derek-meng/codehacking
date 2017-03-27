@@ -18,100 +18,79 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 Route::get('/', function () {
     return view('welcome');
-//    return '123';
 });
+Route::get('/blog', function () {
+    $posts = \App\Post::orderBy('created_at', 'desc')->paginate(3);
+    return view('post.index', compact('posts'));
+});
+Route::get('/about', 'AboutMeController@aboutme');
 
-Route::group(['middleware'=>'admin'], function(){
+Route::group(['middleware' => 'admin'], function () {
 
-    Route::get('/admin', function(){
-
+    Route::get('/admin', function () {
         return view('admin.index');
-
-
     });
+    Route::resource('admin/aboutme', 'AboutMeController', ['names' => [
+        'index' => 'admin.aboutme.index',
+        'create' => 'admin.aboutme.create',
+        'store' => 'admin.aboutme.store',
+        'edit' => 'admin.aboutme.edit'
+    ]]);
 
+    Route::resource('admin/users', 'AdminUsersController', ['names' => [
+        'index' => 'admin.users.index',
+        'create' => 'admin.users.create',
+        'store' => 'admin.users.store',
+        'edit' => 'admin.users.edit'
+    ]]);
 
+    Route::get('/post/{id}', ['as' => 'home.post', 'uses' => 'AdminPostController@post']);
 
-    Route::resource('admin/users', 'AdminUsersController',['names'=>[
+    Route::resource('admin/posts', 'AdminPostController', ['names' => [
+        'index' => 'admin.posts.index',
+        'create' => 'admin.posts.create',
+        'store' => 'admin.posts.store',
+        'edit' => 'admin.posts.edit'
+    ]]);
 
+    Route::resource('admin/categories', 'AdminCategoriesController', ['names' => [
 
-        'index'=>'admin.users.index',
-        'create'=>'admin.users.create',
-        'store'=>'admin.users.store',
-        'edit'=>'admin.users.edit'
+        'index' => 'admin.catergories.index',
+        'create' => 'admin.catergories.create',
+        'store' => 'admin.catergories.store',
+        'edit' => 'admin.catergories.edit'
 
+    ]]);
 
+    Route::resource('admin/media', 'AdminMediasController', ['names' => [
 
-
-
+        'index' => 'admin.media.index',
+        'create' => 'admin.media.create',
+        'store' => 'admin.media.store',
+        'edit' => 'admin.media.edit'
 
     ]]);
 
 
-    Route::get('/post/{id}', ['as'=>'home.post', 'uses'=>'AdminPostController@post']);
+    Route::resource('admin/comments', 'PostCommentsController', ['names' => [
 
-    Route::resource('admin/posts', 'AdminPostController',['names'=>[
-
-        'index'=>'admin.posts.index',
-        'create'=>'admin.posts.create',
-        'store'=>'admin.posts.store',
-        'edit'=>'admin.posts.edit'
-
-
-
-
-
-    ]]);
-
-    Route::resource('admin/categories', 'AdminCategoriesController',['names'=>[
-
-
-        'index'=>'admin.catergories.index',
-        'create'=>'admin.catergories.create',
-        'store'=>'admin.catergories.store',
-        'edit'=>'admin.catergories.edit'
-
-
-    ]]);
-
-    Route::resource('admin/media', 'AdminMediasController',['names'=>[
-
-        'index'=>'admin.media.index',
-        'create'=>'admin.media.create',
-        'store'=>'admin.media.store',
-        'edit'=>'admin.media.edit'
-
+        'index' => 'admin.comments.index',
+        'create' => 'admin.comments.create',
+        'store' => 'admin.comments.store',
+        'edit' => 'admin.comments.edit',
+        'show' => 'admin.comments.show'
 
     ]]);
 
 
-    Route::resource('admin/comments', 'PostCommentsController',['names'=>[
+    Route::resource('admin/comment/replies', 'CommentRepliesController', ['names' => [
 
-
-        'index'=>'admin.comments.index',
-        'create'=>'admin.comments.create',
-        'store'=>'admin.comments.store',
-        'edit'=>'admin.comments.edit',
-        'show'=>'admin.comments.show'
-
+        'index' => 'admin.replies.index',
+        'create' => 'admin.replies.create',
+        'store' => 'admin.replies.store',
+        'edit' => 'admin.replies.edit'
 
     ]]);
-
-
-    Route::resource('admin/comment/replies', 'CommentRepliesController',['names'=>[
-
-
-
-        'index'=>'admin.replies.index',
-        'create'=>'admin.replies.create',
-        'store'=>'admin.replies.store',
-        'edit'=>'admin.replies.edit'
-
-
-    ]]);
-
-
-
 
 
 });

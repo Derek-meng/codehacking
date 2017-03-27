@@ -12,7 +12,8 @@
         "cviebrock/eloquent-sluggable": "4.1.2",
         "unisharp/laravel-filemanager": "^1.7",
         "intervention/image": "^2.3",
-        "jeroennoten/laravel-ckeditor": "^3.8"
+        "jeroennoten/laravel-ckeditor": "^3.8",
+        "jellybool/translug": "^1.0"
 
     },
     "require-dev": {

@@ -46,7 +46,6 @@ class AdminPostController extends Controller
     public function store(PostsCreateRequest $request)
     {
         //
-//        dd($request->all());
         $input=$request->all();
         $user=Auth::user();
         if($file=$request->file('photo_id')){
