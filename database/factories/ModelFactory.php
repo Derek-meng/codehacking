@@ -22,13 +22,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
-$factory->define(App\Post::class, function (Faker\Generator $faker) {
+$factory->define(App\Post::class, function ($faker) use($factory) {
     $category_id=count(Category::all());
     return [
-        'user_id'=>mt_rand(1,3),
+        'user_id' => $factory->create(App\User::class)->id,
         'category_id'=>mt_rand(1,$category_id),
-        'title' => $faker->title,
-        'body' => $faker->paragraphs(mt_rand(7,13)),
-        'remember_token' => str_random(10),
+        'title' => $faker->sentence,
+        'body' =>  $faker->paragraph,
     ];
 });

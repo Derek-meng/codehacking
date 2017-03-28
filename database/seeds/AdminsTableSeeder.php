@@ -14,12 +14,13 @@ class AdminsTableSeeder extends Seeder
     {
         //
         User::create([
-            'role'=>'1',
+            'role_id'=>'1',
             'is_active'=>1,
             'name'=>'Derek',
             'email'=>'123@yahoo.com.tw',
             'password'=>bcrypt('123456'),
             'remember_token' => str_random(10)
         ]);
+        factory(App\User::class,50)->create();
     }
 }
