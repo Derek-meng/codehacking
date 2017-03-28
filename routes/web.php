@@ -24,7 +24,9 @@ Route::get('/blog', function () {
     return view('post.index', compact('posts'));
 });
 Route::get('/about', 'AboutMeController@aboutme');
-
+Route::resource('/contact','ContactController',['only'=>[
+    'index','store'
+]]);
 Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/admin', function () {
