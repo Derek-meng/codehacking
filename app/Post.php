@@ -22,7 +22,6 @@ class Post extends Model
     use Sluggable;
     use SluggableScopeHelpers;
 
-
     public function sluggable()
     {
         return [
