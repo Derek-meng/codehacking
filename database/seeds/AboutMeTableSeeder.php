@@ -15,7 +15,8 @@ class AboutMeTableSeeder extends Seeder
         //
         AboutMe::create([
             'title'=>'About Derek',
-            'body'=>'Hi This is Derek blog about Laravel'
+            'body'=>'Hi This is Derek blog about Laravel',
+            'is_active'=>1,
         ]);
     }
 }

@@ -20,13 +20,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/blog', function () {
-    $posts = \App\Post::orderBy('created_at', 'desc')->paginate(3);
+    $posts = \App\Post::orderBy('created_at', 'desc')->paginate(5);
     return view('post.index', compact('posts'));
 });
 Route::get('/about', 'AboutMeController@aboutme');
 Route::resource('/contact','ContactController',['only'=>[
     'index','store'
 ]]);
+Route::get('/post/{id}', ['as' => 'home.post', 'uses' => 'AdminPostController@post']);
 Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/admin', function () {
@@ -46,7 +47,7 @@ Route::group(['middleware' => 'admin'], function () {
         'edit' => 'admin.users.edit'
     ]]);
 
-    Route::get('/post/{id}', ['as' => 'home.post', 'uses' => 'AdminPostController@post']);
+
 
     Route::resource('admin/posts', 'AdminPostController', ['names' => [
         'index' => 'admin.posts.index',

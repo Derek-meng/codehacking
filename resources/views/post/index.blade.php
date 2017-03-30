@@ -18,8 +18,8 @@
                                 <bd>{{$posts[$i]->created_at}}</bd>
                             </p>
                             <h4>{{$posts[$i]->title}}</h4>
-                            <p>{!! $posts[$i]->body !!}} </p>
-                            <p><a href="/post/{{$posts[$i]->slug}}">Continue Reading...</a></p>
+                            <p>{!!  $posts[$i]->body  !!} </p>
+                            <p><a href="{{route('home.post',$posts[$i]->slug)}}">Continue Reading...</a></p>
                         </div>
 
                     </div><!-- /row -->
@@ -40,8 +40,8 @@
                                 <bd>{{$posts[$i]->created_at}}</bd>
                             </p>
                             <h4>{{$posts[$i]->title}}</h4>
-                            <p class="bq">{!! $posts[$i]->body !!}}</p>
-                            <p><a href="/post/{{$posts[$i]->slug}}">Continue Reading...</a></p>
+                            <p class="bq">{!! $posts[$i]->body !!}</p>
+                            <p><a  href="{{route('home.post',$posts[$i]->slug)}}">Continue Reading...</a></p>
                         </div>
 
                     </div><!-- /row -->
@@ -49,4 +49,9 @@
             </div><!-- /grey -->
         @endif
     @endfor
-@stop
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">
+            {{$posts->render()}}
+        </div>
+    </div>
+@endsection
