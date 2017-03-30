@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd4d1d17-1697-46ec-9fda-9f926d46cdc8" name="預設" comment="update views/post index image">
+    <list default="true" id="fd4d1d17-1697-46ec-9fda-9f926d46cdc8" name="預設" comment="add post href:route">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AboutMeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutMeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPostController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/AboutMeTableSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/AboutMeTableSeeder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/post/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/post/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,21 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="AboutMeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AboutMeController.php">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="100" column="17" lean-forward="false" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/posts/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="28" column="84" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="84" />
+            <state relative-caret-position="140">
+              <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -59,18 +47,48 @@
       <file leaf-file-name="post.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/post.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2598">
-              <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+            <state relative-caret-position="-4020">
+              <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/post/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+            <state relative-caret-position="616">
+              <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog-home.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/blog-home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="952">
+              <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blog-post.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="46" column="48" lean-forward="false" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -79,38 +97,18 @@
       <file leaf-file-name="AdminPostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="144" column="65" lean-forward="true" selection-start-line="144" selection-start-column="65" selection-end-line="144" selection-end-column="65" />
+            <state relative-caret-position="593">
+              <caret line="146" column="29" lean-forward="false" selection-start-line="146" selection-start-column="29" selection-end-line="146" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/post/index.blade.php">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="41" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AboutMeTableSeeder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeds/AboutMeTableSeeder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="127">
+              <caret line="21" column="59" lean-forward="true" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -127,8 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>from</find>
-      <find>include</find>
       <find>與</find>
       <find>mainController</find>
       <find>text</find>
@@ -147,7 +143,6 @@
       <find>col-sm-6 col-sm-offset-5</find>
       <find>/blog</find>
       <find>post(</find>
-      <find>post</find>
       <find>admin.comments.show</find>
       <find>POST</find>
       <find>post/</find>
@@ -156,7 +151,10 @@
       <find>admin.posts.</find>
       <find>as</find>
       <find>/post</find>
+      <find>/contac</find>
+      <find>/contact</find>
       <find>blog</find>
+      <find>post</find>
     </findStrings>
     <replaceStrings>
       <replace>replies</replace>
@@ -203,7 +201,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/ContactBlog.php" />
         <option value="$PROJECT_DIR$/resources/views/include/form_error.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/resources/views/post/contact.blade.php" />
         <option value="$PROJECT_DIR$/database/factories/ModelFactory.php" />
@@ -216,11 +213,12 @@
         <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminPostController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AboutMeController.php" />
         <option value="$PROJECT_DIR$/database/seeds/AboutMeTableSeeder.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/post/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminPostController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php" />
       </list>
     </option>
   </component>
@@ -341,10 +339,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="144" />
+    <option name="y" value="101" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="930" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -410,6 +408,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codehacking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codehacking" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="post" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codehacking" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="codehacking" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -534,7 +576,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="about&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AboutMeController.php&#10;AdminPostController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AdminPostController.php&#10;AboutMeController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AboutMeController.php&#10;layout/&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts&#10;AdminUsersController&#9;null&#9;null&#10;contact&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post/contact.blade.php&#10;conta&#9;FILE&#9;file://C:/www/lara/codehacking/app/Contact.php&#10;/migrat&#9;FILE&#9;file://C:/www/lara/codehacking/database/migrations&#10;contac&#9;FILE&#9;file://C:/www/lara/codehacking/app/Contact.php&#10;web&#9;FILE&#9;file://C:/www/lara/codehacking/routes/web.php&#10;home.&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/home.blade.php&#10;blog&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post/post-blog.blade.php&#10;/migr&#9;FILE&#9;file://C:/www/lara/codehacking/database/migrations&#10;/migrate&#9;FILE&#9;file://C:/www/lara/codehacking/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php&#10;aboutme&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AboutMe.php&#10;About&#9;null&#9;null&#10;web.&#9;FILE&#9;file://C:/www/lara/codehacking/routes/web.php&#10;route&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/routes.php&#10;Translug.php&#9;FILE&#9;file://C:/www/lara/codehacking/vendor/jellybool/translug/src/Translug.php&#10;src\&#9;FILE&#9;file://C:/www/lara/codehacking/vendor/cviebrock/eloquent-sluggable/src&#10;web.php&#9;FILE&#9;file://C:/www/lara/codehacking/routes/web.php&#10;post&#9;FILE&#9;file://C:/www/lara/codehacking/app/Post.php&#10;CommentRepliesController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/CommentRepliesController.php&#10;post.blade&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post.blade.php&#10;PostCommentsController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/PostCommentsController.php&#10;adminpost&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AdminPostController.php&#10;post.b&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post.blade.php&#10;post.bla&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post.blade.php&#10;post\in&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/index.blade.php&#10;post\ind&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/index.blade.php&#10;comment&#9;FILE&#9;file://C:/www/lara/codehacking/app/Comment.php&#10;comments/in&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/comments/index.blade.php&#10;postcom&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/PostCommentsController.php&#10;admin.b&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts/admin.blade.php&#10;routes&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/routes.php&#10;PostC&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/PostCommentController.php&#10;admin&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts/admin.blade.php&#10;media/i&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/media/index.blade.php&#10;create&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/media/create.blade.php&#10;admin.blade&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts/admin.blade.php&#10;admin.bl&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts/admin.blade.php&#10;adminm&#9;null&#9;null&#10;AdminCategoriesController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AdminCategoriesController.php&#10;edit.b&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/categories/edit.blade.php&#10;edit.&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/edit.blade.php&#10;posts/edit&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/edit.blade.php&#10;AdminPos&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AdminPostController.php&#10;index&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/index.blade.php&#10;photo&#9;FILE&#9;file://C:/www/lara/codehacking/app/Photo.php&#10;posts/in&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/index.blade.php" />
+    <property name="SearchEverywhereHistoryKey" value="AdminPostController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AdminPostController.php&#10;about&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AboutMeController.php&#10;AboutMeController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AboutMeController.php&#10;layout/&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts&#10;AdminUsersController&#9;null&#9;null&#10;contact&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post/contact.blade.php&#10;conta&#9;FILE&#9;file://C:/www/lara/codehacking/app/Contact.php&#10;/migrat&#9;FILE&#9;file://C:/www/lara/codehacking/database/migrations&#10;contac&#9;FILE&#9;file://C:/www/lara/codehacking/app/Contact.php&#10;web&#9;FILE&#9;file://C:/www/lara/codehacking/routes/web.php&#10;home.&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/home.blade.php&#10;blog&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post/post-blog.blade.php&#10;/migr&#9;FILE&#9;file://C:/www/lara/codehacking/database/migrations&#10;/migrate&#9;FILE&#9;file://C:/www/lara/codehacking/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php&#10;aboutme&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AboutMe.php&#10;About&#9;null&#9;null&#10;web.&#9;FILE&#9;file://C:/www/lara/codehacking/routes/web.php&#10;route&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/routes.php&#10;Translug.php&#9;FILE&#9;file://C:/www/lara/codehacking/vendor/jellybool/translug/src/Translug.php&#10;src\&#9;FILE&#9;file://C:/www/lara/codehacking/vendor/cviebrock/eloquent-sluggable/src&#10;web.php&#9;FILE&#9;file://C:/www/lara/codehacking/routes/web.php&#10;post&#9;FILE&#9;file://C:/www/lara/codehacking/app/Post.php&#10;CommentRepliesController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/CommentRepliesController.php&#10;post.blade&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post.blade.php&#10;PostCommentsController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/PostCommentsController.php&#10;adminpost&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AdminPostController.php&#10;post.b&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post.blade.php&#10;post.bla&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/post.blade.php&#10;post\in&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/index.blade.php&#10;post\ind&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/index.blade.php&#10;comment&#9;FILE&#9;file://C:/www/lara/codehacking/app/Comment.php&#10;comments/in&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/comments/index.blade.php&#10;postcom&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/PostCommentsController.php&#10;admin.b&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts/admin.blade.php&#10;routes&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/routes.php&#10;PostC&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/PostCommentController.php&#10;admin&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts/admin.blade.php&#10;media/i&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/media/index.blade.php&#10;create&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/media/create.blade.php&#10;admin.blade&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts/admin.blade.php&#10;admin.bl&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/layouts/admin.blade.php&#10;adminm&#9;null&#9;null&#10;AdminCategoriesController&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AdminCategoriesController.php&#10;edit.b&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/categories/edit.blade.php&#10;edit.&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/edit.blade.php&#10;posts/edit&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/edit.blade.php&#10;AdminPos&#9;FILE&#9;file://C:/www/lara/codehacking/app/Http/Controllers/AdminPostController.php&#10;index&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/index.blade.php&#10;photo&#9;FILE&#9;file://C:/www/lara/codehacking/app/Photo.php&#10;posts/in&#9;FILE&#9;file://C:/www/lara/codehacking/resources/views/admin/posts/index.blade.php" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="editor.config.accepted" value="true" />
@@ -675,7 +717,7 @@
       <workItem from="1490599823453" duration="8481000" />
       <workItem from="1490667552497" duration="21173000" />
       <workItem from="1490766320646" duration="1309000" />
-      <workItem from="1490845407706" duration="6655000" />
+      <workItem from="1490845407706" duration="8573000" />
     </task>
     <task id="LOCAL-00001" summary="add EditorConfig">
       <created>1489370698734</created>
@@ -768,11 +810,18 @@
       <option name="project" value="LOCAL" />
       <updated>1490847121072</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add post href:route">
+      <created>1490857735329</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1490857735329</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243071000" />
+    <option name="totallyTimeSpent" value="244989000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -784,7 +833,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="144" y="101" width="1936" height="930" extended-state="0" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28238946" sideWeight="0.507722" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29513514" sideWeight="0.49227798" order="0" side_tool="false" content_ui="combo" />
@@ -792,7 +841,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31962866" sideWeight="0.5075676" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31931818" sideWeight="0.49243245" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3183024" sideWeight="0.49243245" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980605" sideWeight="0.48757765" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4208589" sideWeight="0.48952678" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -869,7 +918,8 @@
     <MESSAGE value="update seeder" />
     <MESSAGE value="update admin/user paginate and add admin/index" />
     <MESSAGE value="update views/post index image" />
-    <option name="LAST_COMMIT_MESSAGE" value="update views/post index image" />
+    <MESSAGE value="add post href:route" />
+    <option name="LAST_COMMIT_MESSAGE" value="add post href:route" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -934,13 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/blog-home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4172">
-          <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/posts/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
@@ -974,13 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="48" lean-forward="false" selection-start-line="0" selection-start-column="48" selection-end-line="0" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1900">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1153,14 +1189,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="147" column="33" lean-forward="true" selection-start-line="147" selection-start-column="33" selection-end-line="147" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1177,26 +1205,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1209,18 +1221,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/post.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AboutMeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2598">
-          <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
+        <state relative-caret-position="382">
+          <caret line="99" column="17" lean-forward="false" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AboutMeController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="100" column="17" lean-forward="false" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
+        <state relative-caret-position="1120">
+          <caret line="40" column="14" lean-forward="true" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1233,34 +1245,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="144" column="65" lean-forward="true" selection-start-line="144" selection-start-column="65" selection-end-line="144" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="127">
+          <caret line="21" column="59" lean-forward="true" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="41" selection-end-column="10" />
+        <state relative-caret-position="420">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="146" column="29" lean-forward="false" selection-start-line="146" selection-start-column="29" selection-end-line="146" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/post.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4020">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="147" column="33" lean-forward="true" selection-start-line="147" selection-start-column="33" selection-end-line="147" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/post/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="42" column="66" lean-forward="false" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+        <state relative-caret-position="616">
+          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/blog-home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/blog-post.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="46" column="48" lean-forward="false" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
           <folding />
         </state>
       </provider>

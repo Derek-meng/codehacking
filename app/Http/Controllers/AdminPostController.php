@@ -138,10 +138,15 @@ class AdminPostController extends Controller
         return redirect('/admin/posts');
 
     }
-
     public function post($slug)
     {
         $post = Post::findBySlugOrFail($slug);
         return view('post', compact('post', 'comments'));
+    }
+
+    public function homeIndex()
+    {
+        $posts = Post::orderBy('created_at', 'desc')->paginate(5);
+        return view('post.index', compact('posts'));
     }
 }

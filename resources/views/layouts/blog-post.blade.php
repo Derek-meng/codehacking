@@ -44,14 +44,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="/blog">Blog</a>
+                    <a href="{{route('home.Index')}}">Blog</a>
                 </li>
                 <li>
 
-                    <a href="/about">About</a>
+                    <a href="{{route('home.aboutme')}}">About</a>
                 </li>
                 <li>
-                    <a href="/contact">Contact</a>
+                    <a href="{{route('Contact.Controller.index')}}">Contact</a>
                 </li>
             </ul>
         </div>

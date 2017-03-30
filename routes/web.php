@@ -19,13 +19,11 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/blog', function () {
-    $posts = \App\Post::orderBy('created_at', 'desc')->paginate(5);
-    return view('post.index', compact('posts'));
-});
-Route::get('/about', 'AboutMeController@aboutme');
-Route::resource('/contact','ContactController',['only'=>[
-    'index','store'
+Route::get('/blog','AdminPostController@homeIndex')->name('home.Index');
+Route::get('/about', 'AboutMeController@aboutme')->name('home.aboutme');
+Route::resource('/contact','ContactController',['names'=>[
+    'index'=>'Contact.Controller.index',
+    'store'=>'Contact.Controller.store',
 ]]);
 Route::get('/post/{id}', ['as' => 'home.post', 'uses' => 'AdminPostController@post']);
 Route::group(['middleware' => 'admin'], function () {
