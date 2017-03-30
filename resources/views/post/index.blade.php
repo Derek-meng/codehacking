@@ -9,9 +9,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
+                            @if($posts[$i]->user->photo)
                             <p><img src="{{$posts[$i]->user->photo->file}}" width="50px" height="50px">
                                 <ba>{{$posts[$i]->user->name}}</ba>
                             </p>
+                            @endif
                             <p>
                                 <bd>{{$posts[$i]->created_at}}</bd>
                             </p>
@@ -29,9 +31,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
+                            @if($posts[$i]->user->photo)
                             <p><img src="{{$posts[$i]->user->photo->file}}" width="50px" height="50px">
                                 <ba>{{$posts[$i]->user->name}}</ba>
                             </p>
+                            @endif
                             <p>
                                 <bd>{{$posts[$i]->created_at}}</bd>
                             </p>
