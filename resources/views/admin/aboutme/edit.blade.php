@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 @section('content')
-    <h1>Edit Posts</h1>
+    <h1>Edit About Me</h1>
+    @if(Session::has('error'))
+        <p class="bg-danger text-center">{{session('error')}}</p>
+    @endif
     <div class="row">
         <div class="col-sm-3">
             @if($post->photo)
@@ -13,10 +16,6 @@
                 {!! Form::label('title','Title') !!}
                 {!! Form::text('title',null,['class'=>'form-control']) !!}
             </div>
-            {{--<div class="form-group">--}}
-                {{--{!! Form::label('category_id','Category:') !!}--}}
-                {{--{!! Form::select('category_id',$categories,null,['class'=>'form-control']) !!}--}}
-            {{--</div>--}}
             <div class="form-group">
                 {!! Form::label('photo_id','Photo:') !!}
                 {!! Form::file('photo_id') !!}

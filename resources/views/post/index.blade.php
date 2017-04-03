@@ -49,6 +49,11 @@
             </div><!-- /grey -->
         @endif
     @endfor
+    @if(!count($posts))
+    <div class="text-center" style="height: 500px">
+        <h1>暂时没有文章哦~</h1>
+    </div>
+    @endif
     <div class="row">
         <div class="col-sm-6 col-sm-offset-5">
             {{$posts->render()}}

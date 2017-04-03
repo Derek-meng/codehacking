@@ -10,6 +10,8 @@ use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
 
 class AdminUsersController extends Controller
@@ -147,6 +149,20 @@ class AdminUsersController extends Controller
        $user->delete();
         Session::flash('deleted_user','帳號已經刪除');
         return redirect('/admin/users');
+    }
 
+    public function search()
+    {
+
+        $requeset=request('data');
+        if ($requeset)
+        {
+            Cache::put('requeset', $requeset, 10);
+        }
+        if (Cache::has('requeset')){
+            $get= Cache::get('requeset');
+            $respone=User::where('name','LIKE','%'.$get.'%')->orWhere('email','LIKE','%'.$get.'%')->paginate(10);
+            return $respone;
+        }
     }
 }

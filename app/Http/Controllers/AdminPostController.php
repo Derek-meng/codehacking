@@ -21,8 +21,8 @@ class AdminPostController extends Controller
     public function index()
     {
         //
-        $posts= Post::paginate(10);
-        return view('admin.posts.index',compact('posts'));
+        $posts = Post::paginate(10);
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
@@ -33,26 +33,26 @@ class AdminPostController extends Controller
     public function create()
     {
         //d
-        $categories=Category::pluck('name','id')->all();
-        return view('admin.posts.create',compact('categories'));
+        $categories = Category::pluck('name', 'id')->all();
+        return view('admin.posts.create', compact('categories'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(PostsCreateRequest $request)
     {
         //
-        $input=$request->all();
-        $user=Auth::user();
-        if($file=$request->file('photo_id')){
-            $name=time().$file->getClientOriginalName();
-            $file->move('images',$name);
-            $photo=Photo::create(['file'=>$name]);
-            $input['photo_id']=$photo->id;
+        $input = $request->all();
+        $user = Auth::user();
+        if ($file = $request->file('photo_id')) {
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images', $name);
+            $photo = Photo::create(['file' => $name]);
+            $input['photo_id'] = $photo->id;
         }
         $user->posts()->create($input);
         return redirect('/admin/posts');
@@ -63,7 +63,7 @@ class AdminPostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -75,43 +75,42 @@ class AdminPostController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         //
-        $post=Post::findOrFail($id);
-        $categories=Category::pluck('name','id')->all();
-        return view('admin.posts.edit',compact('post','categories'));
+        $post = Post::findOrFail($id);
+        $categories = Category::pluck('name', 'id')->all();
+        return view('admin.posts.edit', compact('post', 'categories'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(PostsCreateRequest $request, $id)
     {
         //
-        $post= Post::findOrFail($id);
-        $input=$request->all();
-        if($file=$request->file('photo_id')){
-            $name=time().$file->getClientOriginalName();
-            $file->move('images',$name);
-            if($post->photo)
-            {
-                $photo=Photo::find($post->photo->id);
-                $input['photo_id']=$photo->id;
-                $photo->file=$name;
-                $files=$post->photo->file;
-                unlink(public_path().$files);
+        $post = Post::findOrFail($id);
+        $input = $request->all();
+        if ($file = $request->file('photo_id')) {
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images', $name);
+            if ($post->photo) {
+                $photo = Photo::find($post->photo->id);
+                $input['photo_id'] = $photo->id;
+                $photo->file = $name;
+                $files = $post->photo->file;
+                unlink(public_path() . $files);
                 $photo->save();
-            }else{
-                $photo=Photo::create(['file'=>$name]);
-                $input['photo_id']=$photo->id;
+            } else {
+                $photo = Photo::create(['file' => $name]);
+                $input['photo_id'] = $photo->id;
             }
         }
 //        dd($input);
@@ -122,22 +121,23 @@ class AdminPostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         //
-        $post=Post::findOrFail($id);
-        if($post->photo){
-            $file= $post->photo->file;
-            unlink(public_path().$file);
+        $post = Post::findOrFail($id);
+        if ($post->photo) {
+            $file = $post->photo->file;
+            unlink(public_path() . $file);
         }
         $post->delete();
-        Session::flash('deleted_post','文章已經刪除');
+        Session::flash('deleted_post', '文章已經刪除');
         return redirect('/admin/posts');
 
     }
+
     public function post($slug)
     {
         $post = Post::findBySlugOrFail($slug);
@@ -149,4 +149,19 @@ class AdminPostController extends Controller
         $posts = Post::orderBy('created_at', 'desc')->paginate(5);
         return view('post.index', compact('posts'));
     }
+
+    public function home_search(Request $request)
+    {
+        $request = $request->search;
+        $posts = Post::orderBy('created_at', 'desc')->where('title', 'LIKE', '%' . $request . '%')->orWhere('body', 'LIKE', '%' . $request . '%')->paginate(10);
+        return view('post.index', compact('posts'));
+    }
+
+    public function search(Request $request)
+    {
+        $request = $request->search;
+        $posts = Post::orderBy('created_at', 'desc')->where('title', 'LIKE', '%' . $request . '%')->orWhere('body', 'LIKE', '%' . $request . '%')->paginate(10);
+        return view('admin.posts.index', compact('posts'));
+    }
+
 }

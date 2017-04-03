@@ -1,6 +1,23 @@
 @extends('layouts.admin')
 @section('content')
-    <h1>Posts</h1>
+    <div class="row">
+    <div class="col-sx-6 col-sm-6"><h1>Posts</h1></div>
+    <div class="col-sx-6 col-sm-6">
+        {!! Form::open(['method' => 'post','id'=>'form-id','action'=>'AdminPostController@search']) !!}
+        <li class="sidebar-search">
+            <div class="input-group custom-search-form">
+                <input name="search" type="text" class="form-control" placeholder="Search...">
+                <span class="input-group-btn">
+                        <button  class="btn btn-default" type="submit">
+                            <i class="fa fa-search">
+                            </i>
+                        </button>
+                </span>
+            </div>
+        </li>
+        {!! Form::close() !!}
+    </div>
+    </div>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -21,7 +38,9 @@
             @foreach($posts as $post)
                 <tr>
                     <td>{{$post->id}}</td>
-                    <td><img height="10%" src="{{$post->photo_id ?  $post->photo->file :'http://placehold.it/400x400'  }} " alt=""></td>
+                    <td><img height="10%"
+                             src="{{$post->photo_id ?  $post->photo->file :'http://placehold.it/400x400'  }} " alt="">
+                    </td>
                     <td>{{$post->user->name}}</td>
                     <td>{{$post->category_id ? $post->category->name:'Uncategorized'}}</td>
                     <td><a href={{route('admin.posts.edit',$post->id)}}>{{$post->title}}</a></td>

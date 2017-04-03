@@ -29,6 +29,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
+
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -41,19 +42,29 @@
             <a class="navbar-brand" href="#">Derek Blog</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
                     <a href="{{route('home.Index')}}">Blog</a>
                 </li>
                 <li>
-
                     <a href="{{route('home.aboutme')}}">About</a>
                 </li>
                 <li>
                     <a href="{{route('Contact.Controller.index')}}">Contact</a>
                 </li>
             </ul>
+            <div class="col-sm-3 col-md-3 pull-right">
+                {!! Form::open(['method' => 'post','class'=>'navbar-form','role'=>'search','action'=>'AdminPostController@home_search']) !!}
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search" id="srch-term">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                {!! Form::close() !!}
+
+            </div>
         </div>
         <!-- /.navbar-collapse -->
     </div>
@@ -63,30 +74,30 @@
 <!-- Page Content -->
 {{--<div class="container">--}}
 
-    {{--<div class="row">--}}
+{{--<div class="row">--}}
 
-        {{--<!-- Blog Post Content Column -->--}}
-        {{--<div class="col-lg-8">--}}
-            {{--@yield('content')--}}
-        {{--</div>--}}
+{{--<!-- Blog Post Content Column -->--}}
+{{--<div class="col-lg-8">--}}
+{{--@yield('content')--}}
+{{--</div>--}}
 
-        {{--<!-- Blog Sidebar Widgets Column -->--}}
-            {{--@yield('search')--}}
+{{--<!-- Blog Sidebar Widgets Column -->--}}
+{{--@yield('search')--}}
 
-    {{--</div>--}}
-    {{--<!-- /.row -->--}}
+{{--</div>--}}
+{{--<!-- /.row -->--}}
 
-    {{--<hr>--}}
+{{--<hr>--}}
 
-    {{--<!-- Footer -->--}}
-    {{--<footer>--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-lg-12">--}}
-                {{--<p>Copyright &copy; Your Website 2017</p>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-        {{--<!-- /.row -->--}}
-    {{--</footer>--}}
+{{--<!-- Footer -->--}}
+{{--<footer>--}}
+{{--<div class="row">--}}
+{{--<div class="col-lg-12">--}}
+{{--<p>Copyright &copy; Your Website 2017</p>--}}
+{{--</div>--}}
+{{--</div>--}}
+{{--<!-- /.row -->--}}
+{{--</footer>--}}
 
 {{--</div>--}}
 <!-- /.container -->
