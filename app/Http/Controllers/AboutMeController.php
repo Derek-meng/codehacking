@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AboutMe;
 use App\Category;
+use App\Photo;
 use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -43,7 +44,14 @@ class AboutMeController extends Controller
     public function store(Request $request)
     {
         //
-        AboutMe::Create($request->all());
+        $input = $request->all();
+        if ($file = $request->file('photo_id')) {
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images', $name);
+            $photo = Photo::create(['file' => $name]);
+            $input['photo_id'] = $photo->id;
+        }
+        AboutMe::Create($input);
         return redirect('/admin/aboutme');
     }
 
@@ -82,8 +90,25 @@ class AboutMeController extends Controller
     {
         //
         $post = AboutMe::findOrFail($id);
-        $post->update($request->all());
+        $input = $request->all();
+        if ($file = $request->file('photo_id')) {
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images', $name);
+            if ($post->photo) {
+                $photo = Photo::find($post->photo->id);
+                $input['photo_id'] = $photo->id;
+                $photo->file = $name;
+                $files = $post->photo->file;
+                unlink(public_path() . $files);
+                $photo->save();
+            } else {
+                $photo = Photo::create(['file' => $name]);
+                $input['photo_id'] = $photo->id;
+            }
+        }
+        $post->update($input);
         return redirect('/admin/aboutme');
+
     }
 
     /**

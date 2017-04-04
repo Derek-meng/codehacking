@@ -9,9 +9,12 @@ class AboutMe extends Model
     //
     protected $fillable=[
         'is_active',
-        'photo',
+        'photo_id',
         'body',
         'title',
     ];
+    public function photo(){
+        return $this->belongsTo('App\Photo');
+    }
 
 }

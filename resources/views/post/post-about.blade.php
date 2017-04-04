@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 centered">
                     @if($post->photo)
-                        <img src="assets/img/user.png" alt="Stanley">
+                        <img class="img-circle" height="150px" src="{{($post->photo->file)}}" alt="Stanley">
                     @endif
                     <h1>{{$post->title}}</h1>
                     <p>{!! ($post->body)!!}</p>
@@ -54,7 +54,7 @@
             </div><!-- /colg-lg-6 -->
 
             <div class="col-lg-6">
-                <h4>THE Article Categorys</h4>
+                <h4>The Article Categorys</h4>
                 @foreach($categorys as  $key => $value)
                     {{$value}}
                     <div class="progress">

@@ -17,7 +17,7 @@ class CreateAboutMesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('body');
-            $table->string('photo');
+            $table->string('photo_id');
             $table->integer('is_active')->default(0);
             $table->timestamps();
         });

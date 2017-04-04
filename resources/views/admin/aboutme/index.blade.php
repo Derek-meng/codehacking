@@ -16,10 +16,11 @@
         <tbody>
         @if($posts)
             @foreach($posts as $post)
+                {{--{{dd($post->photo)}}--}}
                 <tr>
                     <td>{{$post->id}}</td>
-                    <td><img height="10%"
-                             src="{{$post->photo_id ?  $post->photo->file :'http://placehold.it/400x400'  }} " alt="">
+                    <td><img height="5%" class="img-circle"
+                             src="{{$post->photo ?  $post->photo->file :'http://placehold.it/400x400'  }} " alt="">
                     </td>
                     <td><a href={{route('admin.aboutme.edit',$post->id)}}>{{$post->title}}</a></td>
                     <td>{{str_limit($post->body,50)}}</td>
