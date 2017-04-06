@@ -20,7 +20,7 @@ class AboutMeController extends Controller
     public function index()
     {
         //
-        $posts = AboutMe::all();
+        $posts = AboutMe::orderBy('updated_at', 'desc')->paginate(10);
         return view('admin.aboutme.index', compact('posts'));
     }
 

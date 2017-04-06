@@ -14,4 +14,9 @@ class Contact extends Model
         'is_active',
         'title',
     ];
+
+    public function reply_message()
+    {
+        return $this->hasOne('App\MessageReply');
+    }
 }

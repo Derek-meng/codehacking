@@ -1,9 +1,9 @@
 @extends('layouts.admin')
 @section('content')
     <div class="row">
-        <div class="col-sx-6 col-sm-6"><h1>Message Posts</h1></div>
+        <div class="col-sx-6 col-sm-6"><h1>Reply Message</h1></div>
         <div class="col-sx-6 col-sm-6">
-            {!! Form::open(['method' => 'post','id'=>'form-id','action'=>'AdminContactController@search']) !!}
+            {!! Form::open(['method' => 'post','id'=>'form-id','action'=>'ReplyMessageController@search']) !!}
             <li class="sidebar-search">
                 <div class="input-group custom-search-form">
                     <input name="search" type="text" class="form-control" placeholder="Search...">
@@ -22,32 +22,16 @@
         <thead>
         <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Title</th>
             <th>Body</th>
-            <th>Reply</th>
-            <th>Created</th>
-            <th>Updated</th>
         </tr>
         </thead>
         <tbody>
-
+        {{--        {{dd($posts)}}--}}
         @if($posts)
             @foreach($posts as $post)
                 <tr>
                     <td>{{$post->id}}</td>
-                    <td>{{$post->name}}</td>
-                    <td>{{$post->email}}</td>
-                    <td><a href={{route('admin.contact.show',$post->id)}}>{{$post->title}}</a></td>
-                    <td>{{str_limit($post->body,50)}}</td>
-                    @if($post->is_active)
-                        <td><a href="{{route('admin.replymessage.show',$post->reply_message->id)}}">是</a></td>
-                    @else
-                        <td>否</td>
-                    @endif
-                    <td>{{$post->created_at}}</td>
-                    <td>{{$post->updated_at}}</td>
+                    <td><a href="{{route('admin.replymessage.show',$post->id)}}">{{$post->body}}</a></td>
                 </tr>
             @endforeach
         @endif

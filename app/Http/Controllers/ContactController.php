@@ -40,9 +40,6 @@ class ContactController extends Controller
     public function store(ContactBlog $request)
     {
         //
-//        dd($request->all());
-//        $mail = $request->all();
-
         $data = [
             'name' => $request->name,
             'email' => $request->email,
@@ -55,7 +52,6 @@ class ContactController extends Controller
 
             $message->to('a0985265734@gmail.com','Derek_blog')->subject('Contact Me');
         });
-//        dd($mail);
         return redirect()->back();
 
     }

@@ -90,13 +90,13 @@
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <header class="text-left">
-                                        <div class="comment-user"><i class="fa fa-user"></i> {{$posts->name}}</div>
-                                        <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{$posts->created_at}}</time>
-                                        <div class=""><i class="fa fa-envelope-o" aria-hidden="true"></i>{{$posts->email}}</div>
+                                        <div class="comment-user"><i class="fa fa-user"></i> {{$posts->contact->name}}</div>
+                                        <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{$posts->contact->created_at}}</time>
+                                        <div class=""><i class="fa fa-envelope-o" aria-hidden="true"></i>{{$posts->contact->email}}</div>
                                     </header>
                                     <div class="comment-post">
                                         <p>
-                                            {{$posts->body}}
+                                            {{$posts->contact->body}}
                                         </p>
                                     </div>
                                     <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
@@ -110,13 +110,10 @@
             </div>
         </div>
         <div class="col-sm-9">
-            {!! Form::open(['method' => 'PATCH','action'=>['AdminContactController@update',$posts->id]]) !!}
+            {!! Form::model($posts,['method' => 'PATCH','action'=>['AdminContactController@update',$posts->id]]) !!}
             <div class="form-group">
                 {!! Form::label('body','Description:') !!}
                 {!! Form::textarea('body',null,['class'=>'form-control']) !!}
-            </div>
-            <div class="form-group">
-                {!! Form::submit('Reply Message',['class'=>'btn btn-primary col-sm-2']) !!}
             </div>
             {!! Form::close() !!}
 

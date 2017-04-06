@@ -8,17 +8,6 @@ use JellyBool\Translug\Translug;
 
 class Post extends Model
 {
-    //
-//    use Sluggable;
-//    public function sluggable()
-//    {
-//        return [
-//            'slug' => [
-//                'source' => 'title',
-//                'unique' => true,
-//            ]
-//        ];
-//    }
     use Sluggable;
     use SluggableScopeHelpers;
 

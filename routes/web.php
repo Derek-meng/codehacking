@@ -78,8 +78,16 @@ Route::group(['middleware' => 'admin'], function () {
         'index' => 'admin.contact.index',
         'show'=>'admin.contact.show',
         'update'=>'admin.contact.update',
-
     ]]);
+    Route::post('admin/message/search','AdminContactController@search');
+
+    Route::resource('admin/replyMessage', 'ReplyMessageController', ['names' => [
+
+        'index' => 'admin.replymessage.index',
+        'show'=>'admin.replymessage.show',
+//        'update'=>'admin.replymessage.update',
+    ]]);
+    Route::post('admin/replyMessage','ReplyMessageController@search');
 
     Route::resource('admin/comments', 'PostCommentsController', ['names' => [
 

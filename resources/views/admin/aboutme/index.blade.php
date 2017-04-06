@@ -50,7 +50,7 @@
     </table>
     <div class="row">
         <div class="col-sm-6 col-sm-offset-5">
-            {{--{{$posts->render()}}--}}
+            {{$posts->render()}}
         </div>
     </div>
 @stop
