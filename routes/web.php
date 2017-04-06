@@ -16,13 +16,11 @@ Auth::routes();
 
 Route::get('/logout', 'Auth\LoginController@logout');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 //Route::post('/api/search','AdminUsersController@search');
 
 Route::post('/blog','AdminPostController@home_search');
-Route::get('/blog','AdminPostController@homeIndex')->name('home.Index');
+Route::get('/','AdminPostController@homeIndex')->name('home.Index');
 Route::get('/about', 'AboutMeController@aboutme')->name('home.aboutme');
 Route::resource('/contact','ContactController',['names'=>[
     'index'=>'Contact.Controller.index',
@@ -56,7 +54,7 @@ Route::group(['middleware' => 'admin'], function () {
         'store' => 'admin.posts.store',
         'edit' => 'admin.posts.edit',
     ]]);
-    Route::post('admin/posts','AdminPostController@search');
+    Route::post('admin/posts/search','AdminPostController@search');
 
     Route::resource('admin/categories', 'AdminCategoriesController', ['names' => [
 
@@ -75,7 +73,13 @@ Route::group(['middleware' => 'admin'], function () {
         'edit' => 'admin.media.edit'
 
     ]]);
+    Route::resource('admin/message', 'AdminContactController', ['names' => [
 
+        'index' => 'admin.contact.index',
+        'show'=>'admin.contact.show',
+        'update'=>'admin.contact.update',
+
+    ]]);
 
     Route::resource('admin/comments', 'PostCommentsController', ['names' => [
 

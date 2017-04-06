@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ContactBlog;
-use Illuminate\Http\Request;
 use App\Contact;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Session;
 
-class ContactController extends Controller
+class AdminContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +16,8 @@ class ContactController extends Controller
     public function index()
     {
         //
-        return view('post.contact');
+        $posts=Contact::orderBy('is_active','desc')->orderBy('created_at','desc')->paginate(10);
+        return view('admin.message.index',compact('posts'));
     }
 
     /**
@@ -29,41 +28,24 @@ class ContactController extends Controller
     public function create()
     {
         //
+
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ContactBlog $request)
+    public function store(Request $request)
     {
         //
-//        dd($request->all());
-//        $mail = $request->all();
-
-        $data = [
-            'name' => $request->name,
-            'email' => $request->email,
-            'title' => $request->title,
-            'body' => $request->body,
-        ];
-        Contact::create($request->all());
-        Session::flash('sent_masseage', '已經成功寄出');
-        $mail=mail::send('emails.mail', $data, function ($message) {
-
-            $message->to('a0985265734@gmail.com','Derek_blog')->subject('Contact Me');
-        });
-//        dd($mail);
-        return redirect()->back();
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -76,7 +58,7 @@ class ContactController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -87,29 +69,32 @@ class ContactController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  int $id
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
         //
+        $user=Contact::findOrFail($id);
+        $date=[$request->body];
+        $user['request']=$date;
+        dd($user);
+        Mail::send('emails.mail_reply', ['user' => $user], function ($m) use ($user) {
+            $m->from('a0985265734@gmail', 'Derek blog');
+
+            $m->to($user->email, $user->name)->subject('回復:'.$user->title);
+        });
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         //
-    }
-    public function admin_index()
-    {
-        //
-        $posts=Contact::orderBy('is_active','desc')->orderBy('created_at','desc')->paginate(10);
-        return view('admin.message.index',compact('posts'));
     }
 }
