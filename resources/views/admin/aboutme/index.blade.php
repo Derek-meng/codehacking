@@ -16,7 +16,6 @@
         <tbody>
         @if($posts)
             @foreach($posts as $post)
-                {{--{{dd($post->photo)}}--}}
                 <tr>
                     <td>{{$post->id}}</td>
                     <td><img height="5%" class="img-circle"

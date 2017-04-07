@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AboutMe;
 use App\Category;
+use App\Http\Requests\AboutMeRequest;
 use App\Photo;
 use App\Post;
 use Illuminate\Http\Request;
@@ -41,9 +42,10 @@ class AboutMeController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AboutMeRequest $request)
     {
         //
+
         $input = $request->all();
         if ($file = $request->file('photo_id')) {
             $name = time() . $file->getClientOriginalName();
@@ -149,4 +151,6 @@ class AboutMeController extends Controller
         $categorys->categorys_all_count = $categorys_all_count;
         return view('post.post-about', compact('post', 'categorys'));
     }
+
+
 }

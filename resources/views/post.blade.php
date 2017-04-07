@@ -153,7 +153,7 @@
             @include('include.post-search')
         </div>
         <hr>
-            @include('include.postfooter')
+        @include('include.postfooter')
     </div>
 @stop
 @section('search')

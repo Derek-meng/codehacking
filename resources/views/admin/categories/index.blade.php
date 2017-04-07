@@ -27,7 +27,7 @@
                     <tr>
                         <td>{{$category->id}}</td>
                         <td><a href="{{route('admin.catergories.edit',$category->id)}}">{{$category->name}}</a></td>
-                        <td>{{$category->created_ed ? $category->created_ed:'no date'}}</td>
+                        <td>{{$category->created_at ? $category->created_at:'no date'}}</td>
                     </tr>
                 @endforeach
                 </tbody>

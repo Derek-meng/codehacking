@@ -141,7 +141,8 @@ class AdminPostController extends Controller
     public function post($slug)
     {
         $post = Post::findBySlugOrFail($slug);
-        return view('post', compact('post', 'comments'));
+        $newpost= Post::orderBy('created_at','DESC')->limit(8)->get();
+        return view('post', compact('post', 'comments','newpost'));
     }
 
     public function homeIndex()

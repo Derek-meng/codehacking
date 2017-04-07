@@ -71,35 +71,6 @@
     <!-- /.container -->
 </nav>
 @yield('content')
-<!-- Page Content -->
-{{--<div class="container">--}}
-
-{{--<div class="row">--}}
-
-{{--<!-- Blog Post Content Column -->--}}
-{{--<div class="col-lg-8">--}}
-{{--@yield('content')--}}
-{{--</div>--}}
-
-{{--<!-- Blog Sidebar Widgets Column -->--}}
-{{--@yield('search')--}}
-
-{{--</div>--}}
-{{--<!-- /.row -->--}}
-
-{{--<hr>--}}
-
-{{--<!-- Footer -->--}}
-{{--<footer>--}}
-{{--<div class="row">--}}
-{{--<div class="col-lg-12">--}}
-{{--<p>Copyright &copy; Your Website 2017</p>--}}
-{{--</div>--}}
-{{--</div>--}}
-{{--<!-- /.row -->--}}
-{{--</footer>--}}
-
-{{--</div>--}}
 <!-- /.container -->
 <!-- jQuery -->
 @yield('footer')

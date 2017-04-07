@@ -25,7 +25,7 @@ class AdminUsersController extends Controller
     {
         //
         $users = User::orderBy('updated_at', 'desc')->paginate(10);
-        return view('admin.users.index',compact('users'));
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -36,14 +36,14 @@ class AdminUsersController extends Controller
     public function create()
     {
         //
-        $roles=Role::pluck('name','id')->all();
-        return view('admin.users.create',compact('roles'));
+        $roles = Role::pluck('name', 'id')->all();
+        return view('admin.users.create', compact('roles'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(UsersRequest $request)
@@ -55,16 +55,15 @@ class AdminUsersController extends Controller
 //            $input['password']=bcrypt($request->password);
 //        }
 
-        $input=$request->all();
-        if($file=$request->file('photo_id')){
-            $name=time().$file->getClientOriginalName();
-            $file->move('images',$name);
-            $photo=Photo::create(['file'=>$name]);
-            $input['photo_id']=$photo->id;
+        $input = $request->all();
+        if ($file = $request->file('photo_id')) {
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images', $name);
+            $photo = Photo::create(['file' => $name]);
+            $input['photo_id'] = $photo->id;
         }
 
-        $input['password']=bcrypt($request->password);
-//        dd($input);
+        $input['password'] = bcrypt($request->password);
         User::create($input);
         return redirect('/admin/users');
     }
@@ -72,7 +71,7 @@ class AdminUsersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -84,84 +83,79 @@ class AdminUsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         //
-        $user= User::find($id);
-        $roles=Role::pluck('name','id')->all();
-        return view('admin.users.edit',compact('user','roles'));
+        $user = User::find($id);
+        $roles = Role::pluck('name', 'id')->all();
+        return view('admin.users.edit', compact('user', 'roles'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(UserEditRequest $request, $id)
     {
         //
-        if(trim($request->password)==""){
-            $input=$request->except('password');
-        }else{
-            $input=$request->all();
-            $input['password']=bcrypt($request->password);
+        if (trim($request->password) == "") {
+            $input = $request->except('password');
+        } else {
+            $input = $request->all();
+            $input['password'] = bcrypt($request->password);
         }
-        $user=User::findOrFail($id);
-        if($file=$request->file('photo_id')){
-            $name=time().$file->getClientOriginalName();
-            $file->move('images',$name);
-            if($user->photo)
-            {
-            $photo=Photo::find($user->photo->id);
-            $input['photo_id']=$photo->id;
-            $photo->file=$name;
-            $photo->save();
-            }else{
-                $photo=Photo::create(['file'=>$name]);
-                $input['photo_id']=$photo->id;
+        $user = User::findOrFail($id);
+        if ($file = $request->file('photo_id')) {
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images', $name);
+            if ($user->photo) {
+                $photo = Photo::find($user->photo->id);
+                $input['photo_id'] = $photo->id;
+                $photo->file = $name;
+                $photo->save();
+            } else {
+                $photo = Photo::create(['file' => $name]);
+                $input['photo_id'] = $photo->id;
             }
         }
-//        dd($input);
         $user->update($input);
         return redirect('/admin/users');
-//        return $request->all();
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         //
-       $user= User::findOrFail($id);
-       if($user->photo)
-       {
-       unlink(public_path().$user->photo->file);
-       }
-       $user->delete();
-        Session::flash('deleted_user','帳號已經刪除');
+        $user = User::findOrFail($id);
+        if ($user->photo) {
+            unlink(public_path() . $user->photo->file);
+        }
+        $user->delete();
+        Session::flash('deleted_user', '帳號已經刪除');
         return redirect('/admin/users');
     }
 
     public function search()
     {
 
-        $requeset=request('data');
-        if ($requeset)
-        {
+        $requeset = request('data');
+        if ($requeset) {
             Cache::put('requeset', $requeset, 10);
         }
-        if (Cache::has('requeset')){
-            $get= Cache::get('requeset');
-            $respone=User::where('name','LIKE','%'.$get.'%')->orWhere('email','LIKE','%'.$get.'%')->paginate(10);
+        if (Cache::has('requeset')) {
+            $get = Cache::get('requeset');
+            $respone = User::where('name', 'LIKE', '%' . $get . '%')->orWhere('email', 'LIKE', '%' . $get . '%')->paginate(10);
             return $respone;
         }
     }
