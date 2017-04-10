@@ -3,14 +3,16 @@
     <!-- Blog Search Well -->
     <div class="well">
         <h4>Blog Search</h4>
+        {!! Form::open(['method' => 'post','class'=>'navbar-form','role'=>'search','action'=>'AdminPostController@home_search']) !!}
         <div class="input-group">
             <input type="text" class="form-control">
             <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
+                            <button class="btn btn-default" name="search" type="submit">
                                 <span class="glyphicon glyphicon-search"></span>
                         </button>
                         </span>
         </div>
+    {!! Form::close() !!}
         <!-- /.input-group -->
     </div>
 
